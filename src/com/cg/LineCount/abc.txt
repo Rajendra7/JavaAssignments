@@ -1,0 +1,4 @@
+1) A Java FileExist Application-30min
+accept the complete path of a file from the user and display whether the file exist or not.
+2) A Java LineCount Application:-30min
+accept the complete path of a file from user and count the number of lines in that file and print it on the console.
