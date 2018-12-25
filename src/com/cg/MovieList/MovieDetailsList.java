@@ -14,7 +14,6 @@ public class MovieDetailsList {
 	
 	public void removeMovie(MovieInformation movieInformation) {
 		movieList.remove(movieInformation);
-		System.out.println(movieInformation);
 	}
 	
 	public boolean removeMovieList() {

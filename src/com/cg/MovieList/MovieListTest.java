@@ -25,7 +25,8 @@ public class MovieListTest {
 		movieTwo=new MovieInformation("ArjunReddy", "VijayDevarakonda", "ShaliniPandey", "Love");
 		movieThree=new MovieInformation("HalfGirlFriend", "ArjunKapoor", "SraddhaKapoor", "Love");
 		movieFour=new MovieInformation("Robo2.o", "RajiniKanth", "AmiJakson", "ScienceFiction");
-		movieFive=new MovieInformation("Kaleja", "MaheshBabu", "Anushka", "comedy");
+		movieFive=new MovieInformation("Kaleja", "MaheshBabu", "Anushka", "comedy"); 
+		movieDetailsList = new MovieDetailsList();
 	}
 	
 
@@ -37,5 +38,21 @@ public class MovieListTest {
 		movieDetailsList.addMovie(movieFour);
 		movieDetailsList.addMovie(movieFive);
 	}
+	@Test
+	public void testForDeleteMovie() {
+		movieDetailsList.removeMovie(movieOne);
+	}
+	
+	/*@Test
+	public void testForRemoveMethodToRemoveAllTheMovieDetailsList(){
+		boolean isEmptyList = movieDetailsList.removeMovieList();
+		assertTrue(isEmptyList);
+	}
+	
+	@Test
+	public void testForFindMovieByMovieName(){
+		MovieInformation movieGetMovieByName = movieDetailsList.getDetailsByMovieName("Yuganiki Okkadu");
+		System.out.println(movieGetMovieByName);
+	}*/
 
 }
