@@ -8,6 +8,9 @@ package com.cg.MovieList;
 
 import static org.junit.Assert.*;
 
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -43,7 +46,7 @@ public class MovieListTest {
 		movieDetailsList.removeMovie(movieOne);
 	}
 	
-	/*@Test
+	@Test
 	public void testForRemoveMethodToRemoveAllTheMovieDetailsList(){
 		boolean isEmptyList = movieDetailsList.removeMovieList();
 		assertTrue(isEmptyList);
@@ -51,8 +54,76 @@ public class MovieListTest {
 	
 	@Test
 	public void testForFindMovieByMovieName(){
-		MovieInformation movieGetMovieByName = movieDetailsList.getDetailsByMovieName("Yuganiki Okkadu");
+		MovieInformation movieGetMovieByName = movieDetailsList.getDetailsByMovieName("ArjunReddy");
 		System.out.println(movieGetMovieByName);
-	}*/
+	}
+	
+	@Test
+	public void testForFindMovieByMovieGenre() {
+		MovieInformation movieGetMovieByGenre = movieDetailsList.getDetailsByMovieGenre("Love");
+		System.out.println(movieGetMovieByGenre);
+	}
+	@Test
+	public void testForSortOfListByMovieName() {
+		movieDetailsList.addMovie(movieOne);
+		movieDetailsList.addMovie(movieTwo);
+		movieDetailsList.addMovie(movieThree);
+		movieDetailsList.addMovie(movieFour);
+		movieDetailsList.addMovie(movieFive);
+		System.out.println("sortMovieListByMovieName");
+		List<MovieInformation> sortMovieListByMovieName = movieDetailsList.sortByMovieName();
+		for (MovieInformation movieInformation : sortMovieListByMovieName) {
+			System.out.println(movieInformation.toString());
+		}
+		
+	}
+	@Test
+	public void testForSortOfListByActorName() {
+		movieDetailsList.addMovie(movieOne);
+		movieDetailsList.addMovie(movieTwo);
+		movieDetailsList.addMovie(movieThree);
+		movieDetailsList.addMovie(movieFour);
+		movieDetailsList.addMovie(movieFive);
+		System.out.println("sortMovieListByActorName");
+		List<MovieInformation> sortMovieListByActorName = movieDetailsList.sortByActorName();
+		for (MovieInformation movieInformation : sortMovieListByActorName) {
+			System.out.println(movieInformation.toString());
+		}
+	}
+	@Test
+	public void testForSortOfListByActressName() {
+		movieDetailsList.addMovie(movieOne);
+		movieDetailsList.addMovie(movieTwo);
+		movieDetailsList.addMovie(movieThree);
+		movieDetailsList.addMovie(movieFour);
+		movieDetailsList.addMovie(movieFive);
+		System.out.println("sortMovieListByActressName");
+		List<MovieInformation> sortMovieListByActressName = movieDetailsList.sortByActressName();
+		for (MovieInformation movieInformation : sortMovieListByActressName) {
+			System.out.println(movieInformation.toString());
+		}
+	}
+	@Test
+	public void testForSortOfListByGenreName() {
+		movieDetailsList.addMovie(movieOne);
+		movieDetailsList.addMovie(movieTwo);
+		movieDetailsList.addMovie(movieThree);
+		movieDetailsList.addMovie(movieFour);
+		movieDetailsList.addMovie(movieFive);
+		System.out.println("sortMovieListByGenreName");
+		List<MovieInformation> sortMovieListByGenreName = movieDetailsList.sortByGenreName();
+		for (MovieInformation movieInformation : sortMovieListByGenreName) {
+			System.out.println(movieInformation.toString());
+		}
+	}
 
 }
+
+
+
+
+
+
+
+
+

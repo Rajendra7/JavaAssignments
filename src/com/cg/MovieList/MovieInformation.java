@@ -38,7 +38,7 @@ public class MovieInformation {
 		this.genre = genre;
 	}
 	@Override
-	public String toString() {
+	public  String toString() {
 		return "MovieInformation [movieName=" + movieName + ", leadActor="
 				+ leadActor + ", leadActress=" + leadActress + ", genre="
 				+ genre + "]";

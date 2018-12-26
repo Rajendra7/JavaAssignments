@@ -3,20 +3,20 @@ package com.cg.basicCollections;
 public class Television {
 	private String company;
 	private String type1;
-	private String Enabled;
+	private String enabled;
 	private double price;
 	public Television(String company, String type1, String enabled, double price) {
 		super();
 		this.company = company;
 		this.type1 = type1;
-		Enabled = enabled;
+		enabled = enabled;
 		this.price = price;
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((Enabled == null) ? 0 : Enabled.hashCode());
+		result = prime * result + ((enabled == null) ? 0 : enabled.hashCode());
 		result = prime * result + ((company == null) ? 0 : company.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(price);
@@ -33,10 +33,10 @@ public class Television {
 		if (getClass() != obj.getClass())
 			return false;
 		Television other = (Television) obj;
-		if (Enabled == null) {
-			if (other.Enabled != null)
+		if (enabled == null) {
+			if (other.enabled != null)
 				return false;
-		} else if (!Enabled.equals(other.Enabled))
+		} else if (!enabled.equals(other.enabled))
 			return false;
 		if (company == null) {
 			if (other.company != null)
@@ -56,7 +56,7 @@ public class Television {
 	@Override
 	public String toString() {
 		return "Television [company=" + company + ", type1=" + type1
-				+ ", Enabled=" + Enabled + ", price=" + price + "]";
+				+ ", Enabled=" + enabled + ", price=" + price + "]";
 	}
 	
 	
