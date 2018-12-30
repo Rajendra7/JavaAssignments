@@ -2,6 +2,8 @@
 
 .project
 .classpath
+.pmd
+.eclipse-pmd
 .settings
 /bin/
 /bin/
